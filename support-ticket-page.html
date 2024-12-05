@@ -1,0 +1,316 @@
+<html><head><base href="www.support-and-knowledge-base.com/support_page"><title>Support Page - Help Center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --success: #2ecc71;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--light);
+}
+
+.ticket-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--light);
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  background: var(--accent);
+}
+
+.status-badge.open {
+  background: var(--success);
+}
+
+.ticket-body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.message-thread {
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.message.agent {
+  background: #e3f2fd;
+  margin-left: 2rem;
+}
+
+.message.user {
+  background: white;
+  margin-right: 2rem;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.ticket-sidebar {
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.reply-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--secondary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.attachment-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: var(--light);
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--success);
+  transition: width 0.3s ease;
+}
+
+@keyframes typing {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--secondary);
+  border-radius: 50%;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+  <div class="ticket-container">
+    <div class="ticket-header">
+      <div>
+        <h1>Support Ticket #12345</h1>
+        <p>Created on: March 15, 2024 - 10:30 AM</p>
+      </div>
+      <span class="status-badge open">Open</span>
+    </div>
+
+    <div class="ticket-body">
+      <div class="main-content">
+        <div class="message-thread">
+          <div class="message user">
+            <div class="message-header">
+              <span>John Doe</span>
+              <span>10:30 AM</span>
+            </div>
+            <p>Hi, I'm having trouble accessing my account. Can you help?</p>
+          </div>
+
+          <div class="message agent">
+            <div class="message-header">
+              <span>Support Agent Sarah</span>
+              <span>10:32 AM</span>
+            </div>
+            <p>Hello John! I'd be happy to help you with your account access issue. Could you please provide me with your email address and describe what happens when you try to log in?</p>
+          </div>
+
+          <div class="message user">
+            <div class="message-header">
+              <span>John Doe</span>
+              <span>10:35 AM</span>
+            </div>
+            <p>Sure, my email is john.doe@email.com. When I try to log in, it says "invalid credentials" even though I'm sure I'm using the correct password.</p>
+          </div>
+
+          <div class="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+
+        <div class="reply-box">
+          <textarea placeholder="Type your message here..."></textarea>
+          <div class="attachment-preview" style="display: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--dark)">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+            <span>document.pdf</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+            <button class="btn">Send Message</button>
+            <button class="btn" style="background: var(--dark);">Attach File</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-sidebar">
+        <h3>Ticket Details</h3>
+        <hr style="margin: 1rem 0;">
+        <p><strong>Category:</strong> Account Access</p>
+        <p><strong>Priority:</strong> Medium</p>
+        <p><strong>Status:</strong> Open</p>
+        <hr style="margin: 1rem 0;">
+        <h4>Related Articles</h4>
+        <ul style="list-style: none; margin-top: 0.5rem;">
+          <li><a href="https://www.support-and-knowledge-base.com/articles/reset-password" style="color: var(--secondary); text-decoration: none;">How to Reset Your Password</a></li>
+          <li><a href="https://www.support-and-knowledge-base.com/articles/account-security" style="color: var(--secondary); text-decoration: none;">Account Security Guide</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.querySelector('textarea').addEventListener('input', function() {
+  // Auto-resize textarea
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+});
+
+document.querySelector('.btn').addEventListener('click', function() {
+  const messageText = document.querySelector('textarea').value;
+  if (messageText.trim()) {
+    const messageThread = document.querySelector('.message-thread');
+    const newMessage = document.createElement('div');
+    newMessage.className = 'message user';
+    newMessage.innerHTML = `
+      <div class="message-header">
+        <span>John Doe</span>
+        <span>${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+      </div>
+      <p>${messageText}</p>
+    `;
+    messageThread.insertBefore(newMessage, document.querySelector('.typing-indicator'));
+    document.querySelector('textarea').value = '';
+    messageThread.scrollTop = messageThread.scrollHeight;
+  }
+});
+
+// File attachment handling
+document.querySelector('button[style*="var(--dark)"]').addEventListener('click', function() {
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.click();
+  
+  fileInput.addEventListener('change', function() {
+    if (this.files && this.files[0]) {
+      const preview = document.querySelector('.attachment-preview');
+      preview.style.display = 'flex';
+      
+      // Simulate upload progress
+      const progress = preview.querySelector('.progress');
+      let width = 0;
+      const interval = setInterval(() => {
+        if (width >= 100) {
+          clearInterval(interval);
+        } else {
+          width += 5;
+          progress.style.width = width + '%';
+        }
+      }, 100);
+    }
+  });
+});
+</script>
+
+</body>
+</html>

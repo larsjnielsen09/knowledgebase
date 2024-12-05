@@ -1,0 +1,291 @@
+<html><head><base href="https://www.support-and-knowledge-base.com/index-with-herosection"><title>Support & Knowledge Base - Your Ultimate Resource Center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #27ae60;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+  --text: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.animated-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(400px, 400px) rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-container {
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/support-startpage">Support</a>
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/tutorials">Tutorials</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="animated-bg">
+      <div class="animated-shape" style="width: 300px; height: 300px; top: -150px; left: -150px;"></div>
+      <div class="animated-shape" style="width: 200px; height: 200px; top: 50%; right: -100px;"></div>
+      <div class="animated-shape" style="width: 150px; height: 150px; bottom: -75px; left: 50%;"></div>
+    </div>
+    
+    <div class="hero-content">
+      <h1>Your Ultimate Resource Center</h1>
+      <p>Find answers, learn new skills, and get the support you need - all in one place.</p>
+      
+      <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for tutorials, documentation, or support...">
+      </div>
+      
+      <div class="hero-buttons">
+        <a href="https://www.support-and-knowledge-base.com/get-started" class="btn btn-primary">Get Started</a>
+        <a href="https://www.support-and-knowledge-base.com/browse-topics" class="btn btn-secondary">Browse Topics</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animated background shapes
+    const createShapes = () => {
+      const bg = document.querySelector('.animated-bg');
+      for (let i = 0; i < 5; i++) {
+        const shape = document.createElement('div');
+        shape.classList.add('animated-shape');
+        const size = Math.random() * 100 + 50;
+        shape.style.width = size + 'px';
+        shape.style.height = size + 'px';
+        shape.style.top = Math.random() * 100 + '%';
+        shape.style.left = Math.random() * 100 + '%';
+        shape.style.animationDuration = (Math.random() * 20 + 10) + 's';
+        shape.style.animationDelay = (Math.random() * 2) + 's';
+        bg.appendChild(shape);
+      }
+    };
+
+    // Search functionality
+    const searchBox = document.querySelector('.search-box');
+    searchBox.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const searchTerm = searchBox.value.trim();
+        if (searchTerm) {
+          window.location.href = `https://www.support-and-knowledge-base.com/search?q=${encodeURIComponent(searchTerm)}`;
+        }
+      }
+    });
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Initialize
+    createShapes();
+  </script>
+</body>
+</html>

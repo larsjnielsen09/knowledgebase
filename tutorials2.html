@@ -1,0 +1,401 @@
+<html><head><base href="www.support-and-knowledge-base.com/tutorials"><title>Support & Knowledge Base | Tutorials</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+  --success: #2ecc71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.header {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.tutorial-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tutorial-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+}
+
+.tutorial-image {
+  height: 160px;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.tutorial-content {
+  padding: 1.5rem;
+}
+
+.difficulty {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.beginner {
+  background: #2ecc71;
+  color: white;
+}
+
+.intermediate {
+  background: #f1c40f;
+  color: var(--dark);
+}
+
+.advanced {
+  background: #e74c3c;
+  color: white;
+}
+
+.tutorial-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.progress-container {
+  margin-top: 1rem;
+  background: #eee;
+  border-radius: 10px;
+  height: 6px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--success);
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filters {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/support-startpage">Support</a>
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/community">Community</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="tutorial-container">
+    <h1>Tutorials</h1>
+    <input type="text" class="search-bar" placeholder="Search tutorials...">
+    
+    <div class="filters">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Beginner</button>
+      <button class="filter-btn">Intermediate</button>
+      <button class="filter-btn">Advanced</button>
+    </div>
+
+    <div class="tutorial-grid">
+      <!-- Tutorial Cards -->
+      <div class="tutorial-card">
+        <div class="tutorial-image">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
+        <div class="tutorial-content">
+          <span class="difficulty beginner">Beginner</span>
+          <h3>Getting Started Guide</h3>
+          <p>Learn the basics and set up your account</p>
+          <div class="tutorial-stats">
+            <span>15 min</span>
+            <span>•</span>
+            <span>4.8 ★</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-image">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="tutorial-content">
+          <span class="difficulty intermediate">Intermediate</span>
+          <h3>Advanced Features</h3>
+          <p>Discover powerful tools and features</p>
+          <div class="tutorial-stats">
+            <span>25 min</span>
+            <span>•</span>
+            <span>4.6 ★</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-image">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div class="tutorial-content">
+          <span class="difficulty advanced">Advanced</span>
+          <h3>Expert Techniques</h3>
+          <p>Master advanced concepts and workflows</p>
+          <div class="tutorial-stats">
+            <span>40 min</span>
+            <span>•</span>
+            <span>4.9 ★</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- More tutorial cards... -->
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">Next →</button>
+    </div>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      filterTutorials(button.textContent.toLowerCase());
+    });
+  });
+
+  // Search functionality
+  const searchBar = document.querySelector('.search-bar');
+  searchBar.addEventListener('input', (e) => {
+    searchTutorials(e.target.value.toLowerCase());
+  });
+
+  // Tutorial card click handler
+  const tutorialCards = document.querySelectorAll('.tutorial-card');
+  tutorialCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h3').textContent;
+      window.location.href = `https://www.support-and-knowledge-base.com/tutorials/${encodeURIComponent(title.toLowerCase().replace(/ /g, '-'))}`;
+    });
+  });
+
+  // Progress bar animation
+  const progressBars = document.querySelectorAll('.progress-bar');
+  progressBars.forEach(bar => {
+    const randomProgress = Math.floor(Math.random() * 100);
+    setTimeout(() => {
+      bar.style.width = `${randomProgress}%`;
+    }, 500);
+  });
+
+  // Pagination
+  const pageButtons = document.querySelectorAll('.page-btn');
+  pageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (!button.classList.contains('active')) {
+        pageButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        // Handle page change
+        loadPage(button.textContent);
+      }
+    });
+  });
+
+  function filterTutorials(difficulty) {
+    const cards = document.querySelectorAll('.tutorial-card');
+    cards.forEach(card => {
+      if (difficulty === 'all') {
+        card.style.display = 'block';
+      } else {
+        const cardDifficulty = card.querySelector('.difficulty').textContent.toLowerCase();
+        card.style.display = cardDifficulty === difficulty ? 'block' : 'none';
+      }
+    });
+  }
+
+  function searchTutorials(query) {
+    const cards = document.querySelectorAll('.tutorial-card');
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      if (title.includes(query) || description.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function loadPage(pageNumber) {
+    // Simulate page loading
+    console.log(`Loading page ${pageNumber}`);
+    // In a real application, this would make an API call to fetch new content
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<html><head><base href="https://www.support-and-knowledge-base.com/cheat-sheet-basic-routing"><title>CCNA Basic Routing Cheat Sheet | Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Waterfall Animation */
+.waterfall {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+  overflow: hidden;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.water-drop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-20px); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(300px); opacity: 0; }
+}
+
+/* Base Styles */
+body {
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: #1a237e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.cheat-sheet {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.command-section {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 4px solid #1a237e;
+  background: #f8f9fa;
+}
+
+.command {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.command-description {
+  margin-top: 5px;
+  color: #666;
+}
+
+.nav-links {
+  background: white;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.nav-links a {
+  color: #1a237e;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #e3f2fd;
+}
+
+.copy-button {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 12px;
+}
+
+.copy-button:hover {
+  background: #283593;
+}
+
+.success-message {
+  display: none;
+  color: green;
+  font-size: 12px;
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <h1>CCNA Basic Routing Cheat Sheet</h1>
+    <p>Quick reference guide for essential routing commands</p>
+  </header>
+
+  <div class="container">
+    <div class="nav-links">
+      <a href="https://www.support-and-knowledge-base.com/how-to-CCNA-Networking-Basics">Networking Basics</a>
+      <a href="https://www.support-and-knowledge-base.com/how-to-CCNA-routing">Advanced Routing</a>
+      <a href="https://www.support-and-knowledge-base.com/how-to-basic-routing">Basic Routing</a>
+    </div>
+
+    <div class="waterfall" id="waterfall"></div>
+
+    <div class="cheat-sheet">
+      <div class="command-section">
+        <h3>Basic Router Configuration</h3>
+        <div class="command">
+          enable
+          <br>configure terminal
+          <br>hostname RouterName
+          <button class="copy-button" onclick="copyCommand(this)">Copy</button>
+          <span class="success-message">Copied!</span>
+        </div>
+        <p class="command-description">Enter privileged EXEC mode and configure router hostname</p>
+      </div>
+
+      <div class="command-section">
+        <h3>Interface Configuration</h3>
+        <div class="command">
+          interface GigabitEthernet0/0
+          <br>ip address 192.168.1.1 255.255.255.0
+          <br>no shutdown
+          <button class="copy-button" onclick="copyCommand(this)">Copy</button>
+          <span class="success-message">Copied!</span>
+        </div>
+        <p class="command-description">Configure IP address on interface and enable it</p>
+      </div>
+
+      <div class="command-section">
+        <h3>Static Route Configuration</h3>
+        <div class="command">
+          ip route 192.168.2.0 255.255.255.0 192.168.1.2
+          <button class="copy-button" onclick="copyCommand(this)">Copy</button>
+          <span class="success-message">Copied!</span>
+        </div>
+        <p class="command-description">Configure static route to remote network</p>
+      </div>
+
+      <div class="command-section">
+        <h3>OSPF Configuration</h3>
+        <div class="command">
+          router ospf 1
+          <br>network 192.168.1.0 0.0.0.255 area 0
+          <button class="copy-button" onclick="copyCommand(this)">Copy</button>
+          <span class="success-message">Copied!</span>
+        </div>
+        <p class="command-description">Configure OSPF routing protocol</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createWaterfall() {
+      const waterfall = document.getElementById('waterfall');
+      const dropCount = 50;
+      
+      for (let i = 0; i < dropCount; i++) {
+        const drop = document.createElement('div');
+        drop.className = 'water-drop';
+        
+        const left = Math.random() * 100;
+        const delay = Math.random() * 2;
+        const duration = 1 + Math.random() * 1;
+        
+        drop.style.left = `${left}%`;
+        drop.style.animationDelay = `${delay}s`;
+        drop.style.animationDuration = `${duration}s`;
+        
+        waterfall.appendChild(drop);
+      }
+    }
+
+    function copyCommand(button) {
+      const commandDiv = button.parentElement;
+      const command = commandDiv.innerText.replace('Copy', '').trim();
+      
+      navigator.clipboard.writeText(command).then(() => {
+        const successMessage = commandDiv.querySelector('.success-message');
+        successMessage.style.display = 'inline';
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 2000);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createWaterfall();
+    });
+  </script>
+</body>
+</html>

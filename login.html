@@ -1,0 +1,318 @@
+<html><head><base href="www.support-and-knowledge-base.com/login"><title>Login - Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.login-header p {
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.remember-me input {
+  width: auto;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background: #2980b9;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-footer a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.social-login h3 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.social-buttons {
+  display: grid;
+  gap: 1rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-button:hover {
+  background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-box {
+    padding: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/support-startpage">Support</a>
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/tutorials">Tutorials</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to access your support account</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="submit" class="login-button">Sign In</button>
+
+        <div class="login-footer">
+          <p><a href="https://www.support-and-knowledge-base.com/forgot-password">Forgot your password?</a></p>
+          <p>Don't have an account? <a href="https://www.support-and-knowledge-base.com/register">Sign up</a></p>
+        </div>
+
+        <div class="social-login">
+          <h3>Or continue with</h3>
+          <div class="social-buttons">
+            <button type="button" class="social-button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#4285F4">
+                <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm6.804 16.864c-.877 2.269-3.063 3.886-5.662 3.886-3.314 0-6-2.686-6-6s2.686-6 6-6c1.596 0 3.044.607 4.137 1.6l-1.635 1.635c-.492-.472-1.132-.768-1.846-.768-1.657 0-3 1.343-3 3s1.343 3 3 3c1.314 0 2.426-.84 2.841-2h-2.841v-2.182h4.928c.051.326.078.661.078 1.001 0 1.785-.653 3.357-1.742 4.828z"/>
+              </svg>
+              Continue with Google
+            </button>
+            <button type="button" class="social-button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Continue with Facebook
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const remember = document.getElementById('remember').checked;
+      
+      // Here you would typically make an API call to authenticate
+      console.log('Login attempt:', { email, password, remember });
+      
+      // Simulate login process
+      const loginButton = document.querySelector('.login-button');
+      loginButton.textContent = 'Signing in...';
+      loginButton.disabled = true;
+      
+      setTimeout(() => {
+        // Redirect to dashboard after successful login
+        window.location.href = 'https://www.support-and-knowledge-base.com/dashboard';
+      }, 1500);
+    });
+
+    // Password visibility toggle could be added here
+    // Social login handlers could be added here
+  </script>
+</body>
+</html>

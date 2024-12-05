@@ -1,0 +1,428 @@
+<html><head><base href="https://www.support-and-knowledge-base.com/testimonials-review"><title>Testimonials & Reviews - Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #27ae60;
+  --light: #f5f6fa;
+  --text: #333;
+  --star-color: #f1c40f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--light);
+  color: var(--text);
+}
+
+.header {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial-header h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.rating {
+  color: var(--star-color);
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.testimonial-content {
+  font-style: italic;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.testimonial-company {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.testimonial-date {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.stats-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 1rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+}
+
+.review-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.star-rating button.active {
+  color: var(--star-color);
+}
+
+.submit-btn {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #219a52;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-header h1 {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/tutorials">Tutorials</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+        <a href="https://www.support-and-knowledge-base.com/login">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="testimonial-header">
+      <h1>Customer Testimonials & Reviews</h1>
+      <p>See what our customers are saying about our support and knowledge base platform</p>
+    </div>
+
+    <div class="stats-container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">4.8</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1,234</div>
+          <div class="stat-label">Total Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support Available</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-date">March 10, 2024</div>
+        <div class="testimonial-avatar">JD</div>
+        <div class="rating">★★★★★</div>
+        <div class="testimonial-content">
+          "The knowledge base platform has transformed how we handle customer support. The documentation is comprehensive and easy to navigate."
+        </div>
+        <div class="testimonial-author">John Doe</div>
+        <div class="testimonial-company">Tech Solutions Inc.</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-date">March 8, 2024</div>
+        <div class="testimonial-avatar">SM</div>
+        <div class="rating">★★★★★</div>
+        <div class="testimonial-content">
+          "Outstanding support team! They're always quick to respond and provide detailed solutions to our problems."
+        </div>
+        <div class="testimonial-author">Sarah Miller</div>
+        <div class="testimonial-company">Digital Innovations</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-date">March 5, 2024</div>
+        <div class="testimonial-avatar">RJ</div>
+        <div class="rating">★★★★☆</div>
+        <div class="testimonial-content">
+          "The tutorial section is incredibly helpful. It's saved our team countless hours of troubleshooting time."
+        </div>
+        <div class="testimonial-author">Robert Johnson</div>
+        <div class="testimonial-company">Creative Studios</div>
+      </div>
+    </div>
+
+    <div class="review-form">
+      <h2>Share Your Experience</h2>
+      <form id="testimonial-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company">
+        </div>
+
+        <div class="form-group">
+          <label>Rating</label>
+          <div class="star-rating" id="star-rating">
+            <button type="button" data-rating="1">★</button>
+            <button type="button" data-rating="2">★</button>
+            <button type="button" data-rating="3">★</button>
+            <button type="button" data-rating="4">★</button>
+            <button type="button" data-rating="5">★</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review">Your Review</label>
+          <textarea id="review" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Star Rating System
+    const starRating = document.getElementById('star-rating');
+    const stars = starRating.getElementsByTagName('button');
+    let currentRating = 0;
+
+    function updateStars(rating) {
+      for (let i = 0; i < stars.length; i++) {
+        stars[i].classList.toggle('active', i < rating);
+      }
+    }
+
+    starRating.addEventListener('click', (e) => {
+      if (e.target.tagName === 'BUTTON') {
+        currentRating = parseInt(e.target.dataset.rating);
+        updateStars(currentRating);
+      }
+    });
+
+    // Form Submission
+    const testimonialForm = document.getElementById('testimonial-form');
+    testimonialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Collect form data
+      const formData = {
+        name: document.getElementById('name').value,
+        company: document.getElementById('company').value,
+        rating: currentRating,
+        review: document.getElementById('review').value
+      };
+
+      // You would typically send this data to your server
+      console.log('Submitted review:', formData);
+      
+      // Clear form
+      testimonialForm.reset();
+      updateStars(0);
+      currentRating = 0;
+
+      // Show success message
+      alert('Thank you for your review!');
+    });
+
+    // Animate testimonial cards on scroll
+    const cards = document.querySelectorAll('.testimonial-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.5s ease-out';
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<html><head><base href="www.support-and-knowledge-base.com/knowledge-base"><title>Knowledge Base - Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--light);
+}
+
+.header {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.search-container {
+  background: white;
+  padding: 2rem;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.categories {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-item {
+  margin-bottom: 0.5rem;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.category-link:hover {
+  background-color: var(--light);
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.article-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-title {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page-button:hover {
+  background: var(--secondary);
+  color: white;
+}
+
+.page-button.active {
+  background: var(--secondary);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/support-startpage">Support</a>
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/tutorials">Tutorials</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="search-container">
+    <div class="search-box">
+      <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" placeholder="Search knowledge base...">
+    </div>
+  </div>
+
+  <main class="main-content">
+    <aside class="categories">
+      <h2 class="category-title">Categories</h2>
+      <ul class="category-list">
+        <li class="category-item">
+          <a href="https://www.support-and-knowledge-base.com/knowledge-base/getting-started" class="category-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg>
+            Getting Started
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="https://www.support-and-knowledge-base.com/knowledge-base/account-settings" class="category-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Account Settings
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="https://www.support-and-knowledge-base.com/knowledge-base/billing" class="category-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            Billing
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="https://www.support-and-knowledge-base.com/knowledge-base/api-docs" class="category-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            API Documentation
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="https://www.support-and-knowledge-base.com/knowledge-base/troubleshooting" class="category-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            Troubleshooting
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="articles">
+      <article class="article-card">
+        <div class="article-content">
+          <h3 class="article-title">How to Create Your First Project</h3>
+          <p>Learn the essential steps to create and set up your first project in our platform.</p>
+          <div class="article-meta">
+            <span>5 min read</span>
+            <span>Updated 2 days ago</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-content">
+          <h3 class="article-title">Understanding Billing Cycles</h3>
+          <p>Everything you need to know about billing cycles, invoicing, and payment methods.</p>
+          <div class="article-meta">
+            <span>3 min read</span>
+            <span>Updated 1 week ago</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-content">
+          <h3 class="article-title">API Authentication Guide</h3>
+          <p>Learn how to authenticate your API requests and manage API keys securely.</p>
+          <div class="article-meta">
+            <span>8 min read</span>
+            <span>Updated 3 days ago</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-content">
+          <h3 class="article-title">Common Error Messages Explained</h3>
+          <p>A comprehensive guide to understanding and resolving common error messages.</p>
+          <div class="article-meta">
+            <span>6 min read</span>
+            <span>Updated 5 days ago</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="pagination">
+    <button class="page-button active">1</button>
+    <button class="page-button">2</button>
+    <button class="page-button">3</button>
+    <button class="page-button">4</button>
+    <button class="page-button">→</button>
+  </div>
+
+  <script>
+    // Search functionality
+    const searchInput = document.querySelector('.search-input');
+    searchInput.addEventListener('input', (e) => {
+      // Implement search logic here
+      console.log('Searching for:', e.target.value);
+    });
+
+    // Pagination functionality
+    const pageButtons = document.querySelectorAll('.page-button');
+    pageButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        pageButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        // Implement page change logic here
+      });
+    });
+  </script>
+</body>
+</html>

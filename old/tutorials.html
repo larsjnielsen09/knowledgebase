@@ -1,0 +1,285 @@
+<html><head><base href="www.support-and-knowledge-base.com/tutorials"><title>Support & Knowledge Base - Tutorials</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #ecf0f1;
+  --success: #2ecc71;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--primary);
+  background: var(--light);
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.breadcrumb {
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tutorial-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+}
+
+.tutorial-progress {
+  height: 4px;
+  background: #ddd;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--success);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.tutorial-content {
+  padding: 1.5rem;
+}
+
+.difficulty {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.beginner { background: #a8e6cf; }
+.intermediate { background: #ffd3b6; }
+.advanced { background: #ffaaa5; }
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: var(--light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.filter-container {
+  padding: 1rem 2rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--secondary);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tutorial-card {
+  animation: fadeIn 0.5s ease-out;
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <h1>Tutorials</h1>
+    <p>Step-by-step guides to master our platform</p>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="https://www.support-and-knowledge-base.com">Home</a> > Tutorials
+  </div>
+
+  <div class="filter-container">
+    <h3>Filter Tutorials:</h3>
+    <div class="filter-options">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Beginner</button>
+      <button class="filter-btn">Intermediate</button>
+      <button class="filter-btn">Advanced</button>
+    </div>
+  </div>
+
+  <div class="tutorial-grid">
+    <div class="tutorial-card">
+      <div class="tutorial-progress">
+        <div class="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="tutorial-content">
+        <span class="difficulty beginner">Beginner</span>
+        <h3>Getting Started with Our Platform</h3>
+        <div class="duration">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+          15 minutes
+        </div>
+        <p>Learn the basics of navigating and using our platform effectively.</p>
+        <div class="tags">
+          <span class="tag">Basics</span>
+          <span class="tag">Navigation</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tutorial-card">
+      <div class="tutorial-progress">
+        <div class="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="tutorial-content">
+        <span class="difficulty intermediate">Intermediate</span>
+        <h3>Advanced Account Settings</h3>
+        <div class="duration">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+          25 minutes
+        </div>
+        <p>Customize your account settings for optimal performance.</p>
+        <div class="tags">
+          <span class="tag">Settings</span>
+          <span class="tag">Customization</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tutorial-card">
+      <div class="tutorial-progress">
+        <div class="progress-bar" style="width: 0%"></div>
+      </div>
+      <div class="tutorial-content">
+        <span class="difficulty advanced">Advanced</span>
+        <h3>API Integration Guide</h3>
+        <div class="duration">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+          </svg>
+          45 minutes
+        </div>
+        <p>Learn how to integrate our API with your existing systems.</p>
+        <div class="tags">
+          <span class="tag">API</span>
+          <span class="tag">Integration</span>
+          <span class="tag">Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    // Remove active class from all buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
+    this.classList.add('active');
+    
+    // Filter logic would go here
+    const filter = this.textContent.toLowerCase();
+    const cards = document.querySelectorAll('.tutorial-card');
+    
+    cards.forEach(card => {
+      const difficulty = card.querySelector('.difficulty').textContent.toLowerCase();
+      if (filter === 'all' || difficulty === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Simulate progress tracking
+document.querySelectorAll('.tutorial-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const progressBar = this.querySelector('.progress-bar');
+    let currentWidth = parseInt(progressBar.style.width) || 0;
+    if (currentWidth < 100) {
+      progressBar.style.width = (currentWidth + 25) + '%';
+    }
+  });
+});
+
+// Add hover effect for better interaction feedback
+document.querySelectorAll('.tutorial-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.cursor = 'pointer';
+  });
+});
+</script>
+
+</body>
+</html>

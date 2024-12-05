@@ -1,0 +1,334 @@
+<html><head><base href="https://www.support-and-knowledge-base.com/how-to-CCNA-Networking-Basics"><title>CCNA Networking Basics - Complete Guide | Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #1a237e;
+  --secondary: #0d47a1;
+  --accent: #2962ff;
+  --light: #f5f6fa;
+  --dark: #1a237e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 3rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.network-diagram {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.topic-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.interactive-term {
+  cursor: pointer;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progress-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.quiz-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.quiz-question {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.network-animation {
+  width: 100%;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.packet {
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  animation: movePacket 3s linear infinite;
+}
+
+@keyframes movePacket {
+  0% { left: 0; top: 50%; }
+  50% { left: 50%; top: 20%; }
+  100% { left: 100%; top: 50%; }
+}
+
+@media (max-width: 768px) {
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>CCNA Networking Basics</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2>Master the Fundamentals of Computer Networking</h2>
+      <p>Your comprehensive guide to understanding networking concepts for CCNA certification</p>
+    </section>
+
+    <div class="network-animation">
+      <div class="packet"></div>
+      <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0;">
+        <line x1="10%" y1="50%" x2="90%" y2="50%" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5"/>
+        <circle cx="25%" cy="50%" r="20" fill="#1a237e"/>
+        <circle cx="75%" cy="50%" r="20" fill="#0d47a1"/>
+        <text x="25%" y="50%" text-anchor="middle" fill="white" dy=".3em">PC</text>
+        <text x="75%" y="50%" text-anchor="middle" fill="white" dy=".3em">Server</text>
+      </svg>
+    </div>
+
+    <div class="topic-grid">
+      <div class="topic-card">
+        <h3>OSI Model</h3>
+        <ul>
+          <li class="tooltip">Physical Layer
+            <span class="tooltip-text">Deals with physical transmission of data</span>
+          </li>
+          <li class="tooltip">Data Link Layer
+            <span class="tooltip-text">Handles error-free transfer between nodes</span>
+          </li>
+          <li class="tooltip">Network Layer
+            <span class="tooltip-text">Manages addressing and routing</span>
+          </li>
+          <li class="tooltip">Transport Layer
+            <span class="tooltip-text">Ensures reliable data delivery</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="topic-card">
+        <h3>IP Addressing</h3>
+        <ul>
+          <li class="tooltip">IPv4
+            <span class="tooltip-text">32-bit addressing system</span>
+          </li>
+          <li class="tooltip">Subnetting
+            <span class="tooltip-text">Division of IP networks into smaller networks</span>
+          </li>
+          <li class="tooltip">CIDR
+            <span class="tooltip-text">Classless Inter-Domain Routing</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="topic-card">
+        <h3>Network Protocols</h3>
+        <ul>
+          <li class="tooltip">TCP/IP
+            <span class="tooltip-text">Transmission Control Protocol/Internet Protocol</span>
+          </li>
+          <li class="tooltip">UDP
+            <span class="tooltip-text">User Datagram Protocol</span>
+          </li>
+          <li class="tooltip">ICMP
+            <span class="tooltip-text">Internet Control Message Protocol</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="progress-section">
+      <h3>Your Learning Progress</h3>
+      <div class="progress-bar">
+        <div class="progress" id="learning-progress"></div>
+      </div>
+      <p>Topics Completed: <span id="topics-completed">0</span>/10</p>
+    </section>
+
+    <section class="quiz-section">
+      <h3>Quick Knowledge Check</h3>
+      <div class="quiz-question">
+        <p>What is the primary function of the Network Layer in the OSI model?</p>
+        <input type="radio" name="q1" value="a" id="q1a">
+        <label for="q1a">Routing and addressing</label><br>
+        <input type="radio" name="q1" value="b" id="q1b">
+        <label for="q1b">Error checking</label><br>
+        <input type="radio" name="q1" value="c" id="q1c">
+        <label for="q1c">Physical transmission</label>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Progress Tracking
+    let completedTopics = 0;
+    const progressBar = document.querySelector('.progress');
+    const topicsCompleted = document.getElementById('topics-completed');
+
+    function updateProgress() {
+      const progress = (completedTopics / 10) * 100;
+      progressBar.style.width = `${progress}%`;
+      topicsCompleted.textContent = completedTopics;
+    }
+
+    // Quiz Handling
+    const quizAnswers = document.querySelectorAll('input[type="radio"]');
+    quizAnswers.forEach(answer => {
+      answer.addEventListener('change', function() {
+        if (this.value === 'a') {
+          completedTopics++;
+          updateProgress();
+          alert('Correct! The Network Layer handles routing and addressing.');
+        } else {
+          alert('Try again! Think about what makes the Network Layer unique.');
+        }
+      });
+    });
+
+    // Interactive Terms
+    document.querySelectorAll('.tooltip').forEach(term => {
+      term.addEventListener('click', function() {
+        const text = this.querySelector('.tooltip-text').textContent;
+        console.log(`Learning: ${text}`);
+      });
+    });
+
+    // Initialize Progress
+    updateProgress();
+
+    // Save Progress
+    function saveProgress() {
+      localStorage.setItem('ccnaProgress', completedTopics);
+    }
+
+    // Load Progress
+    function loadProgress() {
+      const saved = localStorage.getItem('ccnaProgress');
+      if (saved) {
+        completedTopics = parseInt(saved);
+        updateProgress();
+      }
+    }
+
+    // Event Listeners
+    window.addEventListener('beforeunload', saveProgress);
+    document.addEventListener('DOMContentLoaded', loadProgress);
+  </script>
+</body>
+</html>

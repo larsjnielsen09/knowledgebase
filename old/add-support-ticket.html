@@ -1,0 +1,298 @@
+<html><head><base href="www.support-and-knowledge-base.com/add-support-ticket"><title>Submit Support Ticket - Support & Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #ecf0f1;
+  --success: #27ae60;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--primary);
+  background: var(--light);
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.breadcrumb {
+  padding: 1rem;
+  background: white;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.ticket-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.file-upload {
+  border: 2px dashed #ddd;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+  border-color: var(--secondary);
+  background: #f8f9fa;
+}
+
+.file-upload.dragging {
+  background: #e3f2fd;
+  border-color: var(--secondary);
+}
+
+.submit-btn {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.success-message {
+  display: none;
+  background: var(--success);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.priority-select {
+  position: relative;
+}
+
+.priority-high {
+  color: var(--accent);
+}
+
+.priority-medium {
+  color: #f39c12;
+}
+
+.priority-low {
+  color: var(--success);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-submitted .success-message {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <h1>Submit Support Ticket</h1>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="https://www.support-and-knowledge-base.com">Home</a> > Submit Ticket
+  </div>
+
+  <div class="ticket-form-container">
+    <form id="supportTicketForm">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category *</label>
+        <select id="category" required>
+          <option value="">Select a category</option>
+          <option value="technical">Technical Issue</option>
+          <option value="billing">Billing</option>
+          <option value="account">Account Management</option>
+          <option value="feature">Feature Request</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="priority">Priority</label>
+        <select id="priority" class="priority-select">
+          <option value="low" class="priority-low">Low</option>
+          <option value="medium" class="priority-medium">Medium</option>
+          <option value="high" class="priority-high">High</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea id="description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Attachments</label>
+        <div class="file-upload" id="fileUpload">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+          </svg>
+          <p>Drop files here or click to upload</p>
+          <input type="file" id="fileInput" multiple style="display: none">
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Ticket</button>
+
+      <div class="success-message">
+        Your support ticket has been submitted successfully! We'll get back to you soon.
+      </div>
+    </form>
+  </div>
+
+<script>
+document.getElementById('supportTicketForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Collect form data
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    category: document.getElementById('category').value,
+    priority: document.getElementById('priority').value,
+    description: document.getElementById('description').value
+  };
+
+  // Simulate API call
+  setTimeout(() => {
+    console.log('Ticket submitted:', formData);
+    this.classList.add('form-submitted');
+    // Reset form after showing success message
+    setTimeout(() => {
+      this.reset();
+      this.classList.remove('form-submitted');
+    }, 3000);
+  }, 1000);
+});
+
+// File upload handling
+const fileUpload = document.getElementById('fileUpload');
+const fileInput = document.getElementById('fileInput');
+
+fileUpload.addEventListener('click', () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (e) => {
+  const files = Array.from(e.target.files);
+  console.log('Files selected:', files.map(f => f.name));
+});
+
+// Drag and drop functionality
+fileUpload.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  fileUpload.classList.add('dragging');
+});
+
+fileUpload.addEventListener('dragleave', () => {
+  fileUpload.classList.remove('dragging');
+});
+
+fileUpload.addEventListener('drop', (e) => {
+  e.preventDefault();
+  fileUpload.classList.remove('dragging');
+  const files = Array.from(e.dataTransfer.files);
+  console.log('Files dropped:', files.map(f => f.name));
+  
+  // Create a new FileList object and assign it to fileInput
+  const dataTransfer = new DataTransfer();
+  files.forEach(file => dataTransfer.items.add(file));
+  fileInput.files = dataTransfer.files;
+});
+
+// Priority color handling
+document.getElementById('priority').addEventListener('change', function() {
+  this.className = 'priority-select priority-' + this.value;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<html><head><base href="www.support-and-knowledge-base.com/index"><title>Support & Knowledge Base | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --light: #f5f6fa;
+  --dark: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.header {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  border: 2px solid var(--secondary);
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+.popular-topics {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.topic-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.quick-help {
+  background: var(--primary);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.help-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.help-option {
+  background: white;
+  color: var(--primary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 200px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.help-option:hover {
+  transform: scale(1.05);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.floating-chat {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.floating-chat:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stats {
+    gap: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="https://www.support-and-knowledge-base.com" class="logo">Support & KB</a>
+      <div class="nav-links">
+        <a href="https://www.support-and-knowledge-base.com/support-startpage">Support</a>
+        <a href="https://www.support-and-knowledge-base.com/documentation">Documentation</a>
+        <a href="https://www.support-and-knowledge-base.com/community">Community</a>
+        <a href="https://www.support-and-knowledge-base.com/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>How can we help you today?</h1>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search our knowledge base...">
+    </div>
+  </section>
+
+  <section class="popular-topics">
+    <h2>Popular Topics</h2>
+    <div class="topics-grid">
+      <div class="topic-card">
+        <h3>Getting Started</h3>
+        <p>New user guides and tutorials</p>
+      </div>
+      <div class="topic-card">
+        <h3>Account Management</h3>
+        <p>Managing your account settings</p>
+      </div>
+      <div class="topic-card">
+        <h3>Troubleshooting</h3>
+        <p>Common issues and solutions</p>
+      </div>
+      <div class="topic-card">
+        <h3>Best Practices</h3>
+        <p>Tips and recommendations</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-help">
+    <h2>Need Quick Help?</h2>
+    <div class="help-options">
+      <a href="https://www.support-and-knowledge-base.com/live-chat" class="help-option">
+        <h3>Live Chat</h3>
+        <p>Talk to our support team</p>
+      </a>
+      <a href="https://www.support-and-knowledge-base.com/tickets" class="help-option">
+        <h3>Submit Ticket</h3>
+        <p>Create a support ticket</p>
+      </a>
+      <a href="https://www.support-and-knowledge-base.com/community" class="help-option">
+        <h3>Community</h3>
+        <p>Ask the community</p>
+      </a>
+    </div>
+    
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">50K+</div>
+        <p>Articles</p>
+      </div>
+      <div class="stat">
+        <div class="stat-number">24/7</div>
+        <p>Support</p>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1M+</div>
+        <p>Users Helped</p>
+      </div>
+    </div>
+  </section>
+
+  <button class="floating-chat">Chat with us</button>
+
+  <footer>
+    <p>© 2024 Support & Knowledge Base. All rights reserved.</p>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Search functionality
+  const searchInput = document.querySelector('.search-input');
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      window.location.href = `https://www.support-and-knowledge-base.com/search?q=${encodeURIComponent(this.value)}`;
+    }
+  });
+
+  // Topic cards navigation
+  document.querySelectorAll('.topic-card').forEach((card, index) => {
+    card.addEventListener('click', () => {
+      const topics = [
+        'getting-started',
+        'account-management',
+        'troubleshooting',
+        'best-practices'
+      ];
+      window.location.href = `https://www.support-and-knowledge-base.com/topics/${topics[index]}`;
+    });
+  });
+
+  // Floating chat button
+  document.querySelector('.floating-chat').addEventListener('click', function() {
+    const chatWindow = window.open(
+      'https://www.support-and-knowledge-base.com/live-chat',
+      'Live Chat',
+      'width=400,height=600,right=20,bottom=20'
+    );
+  });
+
+  // Animate stats on scroll
+  const stats = document.querySelectorAll('.stat-number');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  stats.forEach(stat => {
+    stat.style.opacity = 0;
+    stat.style.transform = 'translateY(20px)';
+    stat.style.transition = 'all 0.6s ease-out';
+    observer.observe(stat);
+  });
+});
+</script>
+
+</body>
+</html>
