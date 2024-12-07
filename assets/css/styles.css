@@ -27,6 +27,10 @@ body {
 	background: linear-gradient(120deg, var(--dark), var(--lightdark));
 	color: white;
 	padding: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	max-height: 10vh;
 }
 
 .nav {
@@ -35,6 +39,7 @@ body {
 	align-items: center;
 	max-width: 1200px;
 	margin: 0 auto;
+	margin-top: -20px;
 	padding: 1rem;
 }
 
@@ -203,6 +208,7 @@ footer {
 	color: white;
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 	/* border: 1px solid red; Debug CSS style */
 }
 
