@@ -1,55 +1,65 @@
-<?php require_once 'includes/header.php'; 
-header('Content-Type: text/html; charset=utf-8'); ?>
+<?php 
+// header('Content-Type: text/html; charset=utf-8');
+include 'includes/header.php'; ?>
 
 <main>
-	<section class="search-section">
-		<h1>How can we help you today?</h1>
-		<div class="search-bar">
-			<svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<circle cx="11" cy="11" r="8"></circle>
-				<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-			</svg>
-			<input type="text" class="search-input" placeholder="Search our knowledge base...">
-		</div>
-	</section>
+    <section class="hero">
+        <div class="animated-bg">
+            <div class="animated-shape" style="width: 300px; height: 300px; top: -150px; left: -150px;"></div>
+            <div class="animated-shape" style="width: 200px; height: 200px; top: 50%; right: -100px;"></div>
+            <div class="animated-shape" style="width: 150px; height: 150px; bottom: -75px; left: 50%;"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Your Ultimate Resource Center</h1>
+            <p>Find answers, learn new skills, and get the support you need - all in one place.</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for tutorials, documentation, or support...">
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="/get-started" class="btn btn-primary">Get Started</a>
+                <a href="/browse-topics" class="btn btn-secondary">Browse Topics</a>
+            </div>
+        </div>
+    </section>
 
-	<section class="quick-links">
-		<a href="/docs" class="quick-link-card">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-				<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-			</svg>
-			<h3>Documentation</h3>
-			<p>Browse our detailed product documentation</p>
-		</a>
-		
-		<a href="/tutorials" class="quick-link-card">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<polygon points="23 7 16 12 23 17 23 7"></polygon>
-				<rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-			</svg>
-			<h3>Video Tutorials</h3>
-			<p>Learn through step-by-step video guides</p>
-		</a>
-		
-		<a href="/support" class="quick-link-card">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-			</svg>
-			<h3>Support Ticket</h3>
-			<p>Create a ticket for personalized help</p>
-		</a>
-		
-		<a href="/faq" class="quick-link-card">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<circle cx="12" cy="12" r="10"></circle>
-				<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-				<line x1="12" y1="17" x2="12" y2="17"></line>
-			</svg>
-			<h3>FAQ</h3>
-			<p>Find answers to common questions</p>
-		</a>
-	</section>
+    <section class="quick-links">
+        <a href="/documentation" class="quick-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <h3>Documentation</h3>
+            <p>Browse our detailed product documentation</p>
+        </a>
+
+        <a href="/tutorials" class="quick-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            <h3>Tutorials</h3>
+            <p>Learn with step-by-step guides</p>
+        </a>
+
+        <a href="/support" class="quick-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <h3>Support</h3>
+            <p>Get help from our support team</p>
+        </a>
+
+        <a href="/community" class="quick-link-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <h3>Community</h3>
+            <p>Join our community forums</p>
+        </a>
+    </section>
 </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>
+<script src="assets/js/script.js"></script>
