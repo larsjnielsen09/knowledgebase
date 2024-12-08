@@ -16,9 +16,14 @@
             <a href="/" class="logo">Support & KB's</a>
             <div class="nav-links">
                 <a href="/support">Support</a>
-                <a href="/docs">Documentation</a>
+                <a href="/docs">Docs</a>
                 <a href="/tutorials">Tutorials</a>
-                <a href="/contact">Contact</a>
+                <a href="/contact.php">Contact</a>
+            </div>
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
         </nav>
     </header>

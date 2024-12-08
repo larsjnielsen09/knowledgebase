@@ -1,3 +1,7 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
 :root {
 	--primary: #2c3e50;
 	--secondary: #3498db;
@@ -11,4 +15,45 @@
 	z-index: 1000;
 }
 
+@media (max-width: 768px) {
+.nav {
+    display: block;
+    position: relative;
+  }
+.nav-links {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #ddd;
+  }
+.nav-links a {
+    display: block;
+    padding: 10px;
+  }
+.hamburger {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+  }
+.nav-links.show {
+    display: block;
+  }
+}
+.hero {
+	width: 100%;
+	box-sizing: border-box;
+	height: 100vh;
+}
 /* Rest of the CSS code remains the same */
